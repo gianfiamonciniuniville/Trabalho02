@@ -6,11 +6,18 @@ public class Main {
 
         System.out.println("----------- Calculadora de Conversão de Moedas -----------");
 
-        System.out.print("Selecione a moeda de origem: ");
-        Moeda fromCurrency = Moeda.valueOf(scanner.next().toUpperCase());
-        System.out.print("Selecione a moeda de destino: ");
-        Moeda toCurrency = Moeda.valueOf(scanner.next().toUpperCase());
-
+        System.out.println("Selecione a moeda de origem: ");
+        for(Moeda moeda : Moeda.values()){
+            System.out.println(moeda);
+        }
+        Moeda fromCurrency = Moeda.valueOf(scanner.nextLine().toUpperCase());
+        System.out.println("Selecionado -> "+ fromCurrency);
+        System.out.println("Selecione a moeda de destino: ");
+        for(Moeda moeda : Moeda.values()){
+            System.out.println(moeda);
+        }
+        Moeda toCurrency = Moeda.valueOf(scanner.nextLine().toUpperCase());
+        System.out.println("Selecionado -> "+ toCurrency);
         System.out.print("Digite o valor a ser convertido: ");
         double amount = scanner.nextDouble();
 
